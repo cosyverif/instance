@@ -1,7 +1,7 @@
 package = "cosy-instance-env"
 version = "master-1"
 source  = {
-  url    = "git+https://github.com/cosyverif/server.git",
+  url    = "git+https://github.com/cosyverif/instance.git",
   branch = "master",
 }
 
