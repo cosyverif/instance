@@ -12,6 +12,7 @@ Instance.__index = Instance
 
 function Instance.create (config)
   config             = config             or {}
+  config.mode        = config.mode        or "production"
   config.num_workers = config.num_workers or 1
   config.auth0       = config.auth0       or {
     domain        = assert (os.getenv "AUTH0_DOMAIN"),
@@ -69,6 +70,7 @@ function Instance.create (config)
             environment = {
               NPROC             = config.num_workers,
               COSY_BRANCH       = config.branch,
+              COSY_MODE         = config.mode,
               REDIS_PORT        = "tcp://redis:6379",
               POSTGRES_PORT     = "tcp://postgres:5432",
               POSTGRES_USER     = "postgres",

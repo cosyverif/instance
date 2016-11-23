@@ -15,6 +15,7 @@ describe ("instance", function ()
   it ("should work for dev branch", function ()
     local instance = Instance.create {
       branch      = "dev",
+      mode        = "development",
       num_workers = 1,
       auth0       = {
         domain        = assert (os.getenv "AUTH0_DOMAIN"),
