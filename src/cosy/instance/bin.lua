@@ -1,6 +1,6 @@
 #! /usr/bin/env lua
 
-local Instance = require "cosy.server.instance"
+local Instance = require "cosy.instance"
 
 local Config = {
   num_workers = assert (os.getenv "NPROC" or 1),
